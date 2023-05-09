@@ -12,12 +12,15 @@ vim.fn['plug#begin']()
 -- Navigation plugins
 vim.cmd [[Plug 'rbgrouleff/bclose.vim']]
 vim.cmd [[Plug 'scrooloose/nerdtree']]
+vim.cmd[[Plug 'nvim-telescope/telescope.nvim']]
+vim.cmd[[Plug 'ThePrimeagen/git-worktree.nvim']]
 
 -- UI Plugins
 vim.cmd [[Plug 'vim-airline/vim-airline']]
 vim.cmd [[Plug 'vim-airline/vim-airline-themes']]
 vim.cmd [[Plug 'bling/vim-bufferline']]
 vim.cmd [[Plug 'altercation/vim-colors-solarized']]
+vim.cmd[[Plug 'rafi/awesome-vim-colorschemes']]
 
 -- Editor plugins
 vim.cmd [[Plug 'Raimondi/delimitMate']]
