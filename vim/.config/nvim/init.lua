@@ -12,8 +12,6 @@ vim.fn['plug#begin']()
 -- Navigation plugins
 vim.cmd [[Plug 'rbgrouleff/bclose.vim']]
 vim.cmd [[Plug 'scrooloose/nerdtree']]
-vim.cmd[[Plug 'nvim-telescope/telescope.nvim']]
-vim.cmd[[Plug 'ThePrimeagen/git-worktree.nvim']]
 
 -- UI Plugins
 vim.cmd [[Plug 'vim-airline/vim-airline']]
@@ -21,6 +19,12 @@ vim.cmd [[Plug 'vim-airline/vim-airline-themes']]
 vim.cmd [[Plug 'bling/vim-bufferline']]
 vim.cmd [[Plug 'altercation/vim-colors-solarized']]
 vim.cmd[[Plug 'rafi/awesome-vim-colorschemes']]
+vim.cmd[[Plug 'vim-airline/vim-airline-themes']]
+vim.cmd[[Plug 'nvim-lua/plenary.nvim']]
+vim.cmd[[Plug 'nvim-telescope/telescope.nvim']]
+vim.cmd[[Plug 'norcalli/nvim-colorizer.lua']]
+vim.cmd[[Plugin 'lifepillar/vim-solarized8']]
+vim.cmd[[Plug 'shaunsingh/solarized.nvim']]
 
 -- Editor plugins
 vim.cmd [[Plug 'Raimondi/delimitMate']]
@@ -343,3 +347,30 @@ command -range=% -nargs=1 P exe "<line1>,<line2>!".<q-args> | y | sil u | echom 
 command -range=% Hash <line1>,<line2>P cpp -P -fpreprocessed | tr -d '[:space:]' | md5sum
 autocmd FileType cpp com! -buffer -range=% Hash <line1>,<line2>P cpp -P -fpreprocessed | tr -d '[:space:]' | md5sum
 ]]
+
+--- NVCHAD 
+require "core"
+
+local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
+
+if custom_init_path then
+  dofile(custom_init_path)
+end
+
+require("core.utils").load_mappings()
+
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+-- bootstrap lazy.nvim!
+if not vim.loop.fs_stat(lazypath) then
+  require("core.bootstrap").gen_chadrc_template()
+  require("core.bootstrap").lazy(lazypath)
+end
+
+dofile(vim.g.base46_cache .. "defaults")
+vim.opt.rtp:prepend(lazypath)
+require "plugins"
+
+-- Telescope 
+require("theprimeagen")
+
