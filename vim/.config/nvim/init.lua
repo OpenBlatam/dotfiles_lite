@@ -1,4 +1,6 @@
 require("theprimeagen")
+require "plugins"
+
 --require "core"
 --nvchad
 --local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
@@ -20,6 +22,9 @@ vim.cmd[[Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }]]
 -- Navigation plugins
 vim.cmd [[Plug 'rbgrouleff/bclose.vim']]
 vim.cmd [[Plug 'scrooloose/nerdtree']]
+vim.cmd [[Plug 'Xuyuanp/nerdtree-git-plugin']]
+vim.cmd [[Plug 'tiagofumo/vim-nerdtree-syntax-highlight']]
+vim.cmd[[Plug 'christoomey/vim-tmux-navigator']]
 
 -- UI Plugins
 vim.cmd [[Plug 'vim-airline/vim-airline']]
@@ -27,8 +32,9 @@ vim.cmd [[Plug 'vim-airline/vim-airline-themes']]
 vim.cmd [[Plug 'bling/vim-bufferline']]
 vim.cmd [[Plug 'altercation/vim-colors-solarized']]
 vim.cmd[[Plug 'rafi/awesome-vim-colorschemes']]
+vim.cmd[[Plugin 'lifepillar/vim-solarized8']]
 
--- Editor plugins
+-- Editor plugins vim.cmd
 vim.cmd [[Plug 'Raimondi/delimitMate']]
 vim.cmd [[Plug 'scrooloose/nerdcommenter']]
 vim.cmd [[Plug 'tpope/vim-sleuth']]
