@@ -1,5 +1,5 @@
 # dotfiles_lite
-
+https://partyrock.aws/u/astrixial/FWS5pyBpi/CodeForce-Dominator
 Licensing:
 Onsite teams:
 USA1
