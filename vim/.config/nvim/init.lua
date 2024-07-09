@@ -1,6 +1,9 @@
 require("theprimeagen")
 require "plugins"
-
+    require('packer').startup(function()
+      use 'wbthomason/packer.nvim'
+      use 'nvim-lua/plenary.nvim'
+    end)
 --require "core"
 --nvchad
 --local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
