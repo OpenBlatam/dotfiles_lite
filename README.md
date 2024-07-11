@@ -1,5 +1,10 @@
 # dotfiles_lite
 https://partyrock.aws/u/astrixial/FWS5pyBpi/CodeForce-Dominator
+
+Benchmark whisppers in python auto scroll change interfaces:
+396026 ms
+
+
 Licensing:
 Onsite teams:
 USA1
